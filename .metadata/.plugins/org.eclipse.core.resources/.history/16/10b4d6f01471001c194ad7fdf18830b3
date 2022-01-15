@@ -1,0 +1,52 @@
+package testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.*;
+
+import common.SeleniumGenerics;
+import pages.ConfigurationPage;
+import pages.LoginPage;
+
+public class RegressionTest extends SeleniumGenerics
+{
+	
+	public WebDriver driver=null;
+
+	public LoginPage _loginPage= null;
+	public ConfigurationPage _ConfigurationPage=null;
+	
+	@BeforeMethod
+	public void beforeMethod() 
+	{
+		System.out.println("driver ---> "+driver);
+		driver = browserStart("https://bptravel.blueprism.com/");
+		
+		// className obj = new ClassName();
+		//_loginPage = new LoginPage(driver);
+		
+		_loginPage = PageFactory.initElements(driver, LoginPage.class);
+		_ConfigurationPage=PageFactory.initElements(driver, ConfigurationPage.class);
+		System.out.println("driver ---> "+driver);
+	}
+	
+	//1000 
+
+  @Test
+  public void validateConfigurationResetFunctionality() 
+  {
+	  System.out.println("Test");
+	  _loginPage.clickConfigurationLink();
+//	  _ConfigurationPage.setRandomConfigurationValues();
+//	  _ConfigurationPage.resetDefault();
+//	  _ConfigurationPage.checkDefaultValues();
+	  
+  }
+  
+  
+	@AfterMethod
+	public void afterMethod() 
+	{
+		browserClose(driver);
+	}
+}

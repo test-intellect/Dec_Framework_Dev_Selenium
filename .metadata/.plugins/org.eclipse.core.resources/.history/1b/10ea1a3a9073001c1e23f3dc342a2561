@@ -1,0 +1,22 @@
+package common;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapConcept {
+
+	
+	public void hashMapConcept() 
+	{
+		
+		Map<String, String> hmap = new HashMap<String, String>();
+		
+		hmap.put("Name", "Bala");
+		hmap.put("Age", "32");
+		hmap.put("Mobile", "58374967934");
+		hmap.put("Job", "Software");
+	}
+	
+	
+	
+}

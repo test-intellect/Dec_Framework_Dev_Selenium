@@ -1,0 +1,27 @@
+package common;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelConfig {
+
+	
+	public File file ;
+	public FileInputStream fis;
+	public XSSFWorkbook wb;
+	public XSSFSheet sh;
+	
+	public ExcelConfig(String workbookpath) throws FileNotFoundException 
+	{
+		file =new File(workbookpath);
+		fis = new FileInputStream(file);
+	}
+	
+	
+	
+	
+}

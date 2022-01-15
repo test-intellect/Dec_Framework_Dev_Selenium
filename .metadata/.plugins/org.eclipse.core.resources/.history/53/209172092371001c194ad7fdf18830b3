@@ -1,0 +1,37 @@
+package testcases;
+
+import java.io.IOException;
+
+import org.testng.annotations.*;
+
+import common.ExcelConfig;
+
+public class SmokeTest extends TestNGBaseRunner
+{
+
+	@BeforeClass
+	public void beforeClass() throws Exception 
+	{
+		excel = new ExcelConfig("./TestData/Workbook.xlsx", "SmokeData");
+	}
+
+	@Test
+	public void smokeTestcase_1() throws IOException 
+	{
+		excel.getTestData("smokeTestcase_1");
+		
+		_loginPage.loginWithValidCredentials("admin", "admin", "https://bptravel.blueprism.com/search.html"); 
+		System.out.println("Automation"); // 4
+	}
+
+	@Test(enabled = false)
+	public void smokeTestcase_2() throws IOException 
+	{
+		excel.getTestData("smokeTestcase_2");
+		_loginPage.loginWithINValidCredentials("bala", "balA", "bALA"); //3
+		
+		String name ="Automation";
+		
+		
+	}
+}

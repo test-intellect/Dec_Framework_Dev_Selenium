@@ -1,0 +1,43 @@
+package common;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapConcept {
+
+	
+	public static  void hashMapConcept() 
+	{
+		
+		Map<String, String> hmap = new HashMap<String, String>();
+		
+		hmap.put("Name", "Bala");
+		hmap.put("Age", "32");
+		hmap.put("Mobile", "58374967934");
+		hmap.put("Job", "Software");
+		hmap.put(null, "Testingh");
+		
+	System.out.println(hmap.get("Job"));
+	
+	System.out.println(hmap.entrySet());
+	System.out.println(hmap.keySet());
+	
+	hmap.clear();
+	
+	System.out.println(hmap.entrySet());
+	
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+		hashMapConcept();
+	}
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+package testcases;
+
+import org.testng.annotations.*;
+
+import common.PrintUtills;
+
+public class SmokeTest extends TestNGBaseRunner
+{
+	
+
+	//2
+
+  @Test
+  public void smokeTestcase() 
+  {
+	  _loginPage.loginWithValidCredentials("admin", "admin", "https://bptravel.blueprism.com/search.html");
+	  _loginPage.clickConfigurationLink();	  
+  }
+  
+  
+
+}

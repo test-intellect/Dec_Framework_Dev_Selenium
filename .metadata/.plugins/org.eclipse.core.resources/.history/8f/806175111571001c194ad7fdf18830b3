@@ -1,0 +1,26 @@
+package testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.*;
+
+import common.SeleniumGenerics;
+import pages.ConfigurationPage;
+import pages.LoginPage;
+
+public class SmokeTest extends SeleniumGenerics
+{
+	
+
+	//2
+
+  @Test
+  public void smokeTestcase() 
+  {
+	  System.out.println("Test");
+	  _loginPage.clickConfigurationLink();	  
+  }
+  
+  
+
+}

@@ -1,0 +1,31 @@
+package testcases;
+
+import org.testng.annotations.*;
+
+public class SmokeTest extends TestNGBaseRunner
+{
+
+
+
+	@Test
+	public void smokeTestcase_1() 
+	{
+		_loginPage.loginWithValidCredentials("admin", "admin", "https://bptravel.blueprism.com/search.html"); 
+		System.out.println("Automation"); // 4
+	}
+
+	@Test
+	public void smokeTestcase_2() 
+	{
+		_loginPage.loginWithINValidCredentials("bala", "balA", "bALA"); //3
+		
+		String name ="Automation";
+		
+		
+	}
+
+	
+
+
+
+}

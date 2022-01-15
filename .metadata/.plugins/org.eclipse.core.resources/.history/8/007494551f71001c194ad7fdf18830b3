@@ -1,0 +1,21 @@
+package testcases;
+
+import org.testng.annotations.*;
+
+public class RegressionTest extends TestNGBaseRunner
+{
+	
+	//1000 
+
+  @Test
+  public void validateConfigurationResetFunctionality() 
+  {
+	  System.out.println("Test");
+	  _loginPage.clickConfigurationLink();
+//	  _ConfigurationPage.setRandomConfigurationValues();
+//	  _ConfigurationPage.resetDefault();
+//	  _ConfigurationPage.checkDefaultValues();
+	  
+  }
+
+}
